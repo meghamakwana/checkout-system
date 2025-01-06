@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Checkout_1 = require("./Checkout");
+const PricingRules_1 = require("./PricingRules");
+const pricingRules = [PricingRules_1.appleTvPricingRule, PricingRules_1.superIpadPricingRule, PricingRules_1.defaultPricingRule];
+const co = new Checkout_1.Checkout(pricingRules);
+co.scan('atv');
+co.scan('atv');
+co.scan('atv');
+co.scan('atv');
+co.scan('atv');
+co.scan('vga');
+console.log(`Total: $${co.total().toFixed(2)}`);
